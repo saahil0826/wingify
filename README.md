@@ -1,1 +1,1 @@
-- Check the app live [here](https://wingify.surge.sh/).
+- Check the live version [here](https://wingify.surge.sh/).
