@@ -1,0 +1,126 @@
+$blue: #2d9cdb;
+$red: #eb5757;
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%;
+
+    .item-container {
+      height: 100%;
+      width: 85%;
+
+      .form-heading {
+        font-size: 20px;
+      }
+
+      .form-element-container {
+        height: 75%;
+
+        .form-element {
+          width: 100%;
+          margin-top: 15px;
+
+          #optional {
+            font-size: 12px;
+          }
+
+          label {
+            font-family: "Roboto";
+            font-weight: 700;
+            font-size: 15px;
+          }
+
+          .input-field-parent {
+            display: flex;
+            flex-direction: column;
+            height: 60px;
+            margin-top: 5px;
+
+            .input-field {
+              width: 90%;
+              height: 50%;
+            }
+
+            .error {
+              position: relative;
+              width: 80%;
+              border-radius: 3px;
+              margin-left: 0px;
+              height: 40%;
+              margin-top: 4px;
+
+              p {
+                font-family: "Roboto";
+                font-size: 11px;
+                text-align: left;
+                color: white;
+                padding: 0px;
+              }
+            }
+            ::-webkit-input-placeholder {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+
+          .radio {
+            width: 60%;
+            height: 40%;
+            align-items: center;
+            flex-direction: row;
+
+            #radio-label {
+              font-weight: 400;
+              margin: 0px;
+              font-size: 13px;
+            }
+          }
+        }
+        .password{
+          // border: 1px solid red;
+          margin-top: -3px;
+        }
+      }
+
+      button {
+        font-size: 12px;
+        padding: 10px 40px;
+        border-radius: 3px;
+        font-family: "Roboto";
+        font-weight: 400;
+        margin-top: -2px;
+
+        &:hover {
+          background-color: $blue;
+          transition-duration: 0s;
+        }
+      }
+    }
+  }
+
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border: 2px solid $blue;
+    border-radius: 100%;
+    background: #f2f2f2;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: $blue;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+}
